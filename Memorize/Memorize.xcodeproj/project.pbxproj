@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80278EEA2B3F36F200095BFE /* FlyingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80278EE92B3F36F200095BFE /* FlyingNumber.swift */; };
+		804DFF042B36E6E100B0AEE5 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804DFF032B36E6E100B0AEE5 /* MemoryGame.swift */; };
+		804DFF062B36E8AF00B0AEE5 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804DFF052B36E8AF00B0AEE5 /* EmojiMemoryGame.swift */; };
+		804E97412B3D83A4005A5115 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804E97402B3D83A4005A5115 /* AspectVGrid.swift */; };
 		80AE17142B34BC4D0001DCA4 /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE17132B34BC4D0001DCA4 /* MemorizeApp.swift */; };
-		80AE17162B34BC4D0001DCA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE17152B34BC4D0001DCA4 /* ContentView.swift */; };
+		80AE17162B34BC4D0001DCA4 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE17152B34BC4D0001DCA4 /* EmojiMemoryGameView.swift */; };
 		80AE17182B34BC4D0001DCA4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE17172B34BC4D0001DCA4 /* Item.swift */; };
 		80AE171A2B34BC4F0001DCA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AE17192B34BC4F0001DCA4 /* Assets.xcassets */; };
 		80AE171D2B34BC4F0001DCA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AE171C2B34BC4F0001DCA4 /* Preview Assets.xcassets */; };
+		80DC94FD2B3F01B400BE1668 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC94FC2B3F01B400BE1668 /* CardView.swift */; };
+		80DC94FF2B3F0BEF00BE1668 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC94FE2B3F0BEE00BE1668 /* Pie.swift */; };
+		80DC95012B3F119800BE1668 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95002B3F119700BE1668 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80278EE92B3F36F200095BFE /* FlyingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingNumber.swift; sourceTree = "<group>"; };
+		804DFF032B36E6E100B0AEE5 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = SOURCE_ROOT; };
+		804DFF052B36E8AF00B0AEE5 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		804E97402B3D83A4005A5115 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		80AE17102B34BC4D0001DCA4 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AE17132B34BC4D0001DCA4 /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
-		80AE17152B34BC4D0001DCA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		80AE17152B34BC4D0001DCA4 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		80AE17172B34BC4D0001DCA4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		80AE17192B34BC4F0001DCA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80AE171C2B34BC4F0001DCA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80DC94FC2B3F01B400BE1668 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		80DC94FE2B3F0BEE00BE1668 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		80DC95002B3F119700BE1668 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +67,15 @@
 		80AE17122B34BC4D0001DCA4 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				804E97402B3D83A4005A5115 /* AspectVGrid.swift */,
+				804DFF032B36E6E100B0AEE5 /* MemoryGame.swift */,
+				804DFF052B36E8AF00B0AEE5 /* EmojiMemoryGame.swift */,
 				80AE17132B34BC4D0001DCA4 /* MemorizeApp.swift */,
-				80AE17152B34BC4D0001DCA4 /* ContentView.swift */,
+				80AE17152B34BC4D0001DCA4 /* EmojiMemoryGameView.swift */,
+				80278EE92B3F36F200095BFE /* FlyingNumber.swift */,
+				80DC94FC2B3F01B400BE1668 /* CardView.swift */,
+				80DC95002B3F119700BE1668 /* Cardify.swift */,
+				80DC94FE2B3F0BEE00BE1668 /* Pie.swift */,
 				80AE17172B34BC4D0001DCA4 /* Item.swift */,
 				80AE17192B34BC4F0001DCA4 /* Assets.xcassets */,
 				80AE171B2B34BC4F0001DCA4 /* Preview Content */,
@@ -140,9 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80AE17162B34BC4D0001DCA4 /* ContentView.swift in Sources */,
+				80DC94FD2B3F01B400BE1668 /* CardView.swift in Sources */,
+				80AE17162B34BC4D0001DCA4 /* EmojiMemoryGameView.swift in Sources */,
+				80DC94FF2B3F0BEF00BE1668 /* Pie.swift in Sources */,
+				80DC95012B3F119800BE1668 /* Cardify.swift in Sources */,
 				80AE17182B34BC4D0001DCA4 /* Item.swift in Sources */,
+				804E97412B3D83A4005A5115 /* AspectVGrid.swift in Sources */,
 				80AE17142B34BC4D0001DCA4 /* MemorizeApp.swift in Sources */,
+				804DFF042B36E6E100B0AEE5 /* MemoryGame.swift in Sources */,
+				804DFF062B36E8AF00B0AEE5 /* EmojiMemoryGame.swift in Sources */,
+				80278EEA2B3F36F200095BFE /* FlyingNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

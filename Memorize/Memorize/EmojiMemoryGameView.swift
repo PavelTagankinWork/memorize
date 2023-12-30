@@ -9,53 +9,60 @@ import SwiftUI
 import SwiftData
 
 struct EmojiMemoryGameView: View {
-    var viewModel: EmojiMemoryGame
+    typealias Card = MemoryGame<String>.Card
+    @ObservedObject var viewModel: EmojiMemoryGame
     
-    let emojis: [String] = ["👻", "🎃", "🕷️", "😈", "🫥", "👾", "🤖", "👽"]
+    private let emojis: [String] = ["👻", "🎃", "🕷️", "😈", "🫥", "👾", "🤖", "👽"]
+    
+    private let aspectRatio : CGFloat = 2/3
     
     var body: some View {
-        ScrollView {
-            cards
+        VStack {
+                cards
+            HStack {
+                score
+                Spacer()
+                shuffle
+            }.font(.title2)
         }
         .padding()
     }
     
-    var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85))]){
-            ForEach(emojis.indices, id: \.self) { index in
-                CardView(content: emojis[index])
-                    .aspectRatio(2/3, contentMode: .fit)
+    @State private var lastScoreChange = (0, causedByCardId: "")
+    
+    private var score: some View {
+        Text("Score: \(viewModel.score)").animation(nil)
+    }
+    
+    private var shuffle: some View {
+        Button("Shuffle") {
+            withAnimation {
+                viewModel.shuffle()
             }
+        }
+    }
+    
+
+    private var cards: some View {
+        AspectVGrid(viewModel.cards, aspectRatio: aspectRatio) { card in
+            CardView(card)
+                .padding(4)
+                .overlay(FlyingNumber(number: scoreChange(causedBy: card)))
+                .zIndex(scoreChange(causedBy: card) != 0 ? 100 : 0)
+                .onTapGesture {
+                    withAnimation {
+                        let scoreBeforeChanging = viewModel.score
+                        viewModel.choose(card)
+                        let scoreChange = viewModel.score - scoreBeforeChanging
+                        lastScoreChange = (scoreChange, card.id)
+                    }
+                }
         }
         .foregroundColor(.blue)
     }
-}
-
-struct CardView: View {
     
-    let content: String
-    @State var isFaceUp : Bool = true
-    
-    var body: some View {
-        ZStack {
-            let base = RoundedRectangle(cornerRadius: 12)
-            
-            Group {
-                base.fill(.white)
-                base.strokeBorder(lineWidth: 2)
-                Text(content).font(.largeTitle)
-            }
-            .opacity(isFaceUp ? 1 : 0)
-            base.fill().opacity(isFaceUp ? 0 : 1)
-        }
-        .onTapGesture {
-            isFaceUp.toggle()
-        }
-    }
-}
-
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    private func scoreChange(causedBy card: Card) -> Int {
+        let (amount, causedByCardId: id) = lastScoreChange
+        return card.id == id ? amount : 0
     }
 }
